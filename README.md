@@ -1,2 +1,5 @@
 # Liquidaci-n-y-pagos-uv
-Integrante
+Integrantes:
+- Elizabeth Oneto
+- Joaquín Aguilera
+- Vicente Cruces
