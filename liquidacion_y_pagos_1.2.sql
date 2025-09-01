@@ -114,16 +114,13 @@ DROP TABLE IF EXISTS `reportes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `reportes` (
-  `rut_empleado` int NOT NULL,
   `rut_paciente` int NOT NULL,
   `descripcion` text NOT NULL,
   `observación` text,
   `tipo_de_reporte` varchar(15) NOT NULL,
   `id_reporte` int NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id_reporte`),
-  KEY `rut_empleado` (`rut_empleado`),
   KEY `rut_paciente` (`rut_paciente`),
-  CONSTRAINT `reportes_ibfk_1` FOREIGN KEY (`rut_empleado`) REFERENCES `tiene_reporte` (`rut_empleado`),
   CONSTRAINT `reportes_ibfk_2` FOREIGN KEY (`rut_paciente`) REFERENCES `paciente` (`rut`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -198,15 +195,12 @@ DROP TABLE IF EXISTS `urgencias_medicas`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `urgencias_medicas` (
   `id_urgencia` int NOT NULL AUTO_INCREMENT,
-  `rut_empleado` int NOT NULL,
   `rut_paciente` int NOT NULL,
   `fecha` datetime NOT NULL,
   `observacion` text NOT NULL,
   `ala` varchar(20) NOT NULL,
   `procedimiento` text NOT NULL,
-  PRIMARY KEY (`id_urgencia`),
-  KEY `rut_empleado` (`rut_empleado`),
-  CONSTRAINT `urgencias_medicas_ibfk_1` FOREIGN KEY (`rut_empleado`) REFERENCES `tiene_urgencia` (`rut_empleado`)
+  PRIMARY KEY (`id_urgencia`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -228,4 +222,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-09-01 19:41:46
+-- Dump completed on 2025-09-01 19:55:13
