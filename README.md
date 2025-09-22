@@ -12,4 +12,5 @@ Integrantes:
 
 # Esquema Entidad-Relación
 
-<img width="1205" height="709" alt="imagen" src="https://github.com/user-attachments/assets/f3ada273-0626-418d-97f2-a63d9a763976" />
+![Imagen de WhatsApp 2025-09-21 a las 21 29 54_84337575](https://github.com/user-attachments/assets/f18d924c-8329-4158-82c7-3c9578c83c29)
+
